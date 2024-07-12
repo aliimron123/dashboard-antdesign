@@ -1,0 +1,23 @@
+# don't ever lint node_modules
+node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+.next
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+#storybook
+storybook-static
+
+# etc
+.eslintrc.js
+next.config.js
+.storybook
+stories

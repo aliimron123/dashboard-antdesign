@@ -1,0 +1,27 @@
+{
+  "trailingComma": "es5",
+  "semi": true,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "importOrder": [
+    ".css$",
+    "^@/styles/(.*)$",
+    "^react",
+    "<BUILTIN_MODULES>",
+    "<THIRD_PARTY_MODULES>",
+    "^@/components/(.*)$",
+    "^@/hooks/(.*)$",
+    "^@/utils/(.*)$",
+    "^@/config/(.*)$",
+    "^@/service/(.*)$",
+    "^@/types/(.*)$",
+    "^@/public/(.*)$",
+    "^[./]"
+  ]
+}
