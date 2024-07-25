@@ -20,6 +20,10 @@ Ensure you have Node.js and npm installed. If not, download and install them fro
 
 ### 2. Clone This Repository
 
+```bash
+git clone https://github.com/aliimron123/dashboard-antdesign.git
+```
+
 ### 3. Install React Project
 
 Install all dependencies
@@ -33,8 +37,8 @@ If you wat create your project not clone in this repo you should install react f
 1. you can create or install react using `create-react-app`:
 
 ```bash
-npx create-react-app my-app
-cd my-app
+npx create-react-app [your-app-name]
+cd [your-app-name]
 ```
 
 2.Install Ant Design
