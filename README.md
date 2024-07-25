@@ -75,3 +75,16 @@ module.exports = {
 }
 
 ```
+
+4.Run the Project
+
+```bash
+npm start
+```
+
+or
+
+```bash
+npm run start
+
+```
