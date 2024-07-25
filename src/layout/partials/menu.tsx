@@ -18,25 +18,25 @@ const MenuNav: MenuItem[] = [
   {
     key: "2",
     icon: <ProjectOutlined />,
-    label: <a href="/"> Projects </a>,
+    label: <a href="/project"> Projects </a>,
   },
   {
     key: "3",
     icon: <UnorderedListOutlined />,
-    label: <a href="/"> Task List </a>,
+    label: <a href="/todo-list"> Task List </a>,
   },
   {
     key: "4",
     icon: <BellOutlined />,
-    label: <a href="/"> Notifications </a>,
+    label: <a href="/notifications"> Notifications </a>,
   },
   {
     key: "sub1",
     label: " Accounts ",
     icon: <UserOutlined />,
     children: [
-      { key: "5", label: <a href="/"> Admin </a> },
-      { key: "6", label: <a href="/"> User </a> },
+      { key: "5", label: <a href="/account/admin"> Admin </a> },
+      { key: "6", label: <a href="/account/admin"> User </a> },
     ],
   },
 ];
