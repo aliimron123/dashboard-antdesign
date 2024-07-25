@@ -23,7 +23,7 @@ const NavDesktop = ({ collapsed, setCollapsed }: IProps) => {
         top: 0,
         bottom: 0,
         backgroundColor: "#fff",
-        zIndex: "20",
+        zIndex: "50",
       }}
       className="border-1 border-r"
     >

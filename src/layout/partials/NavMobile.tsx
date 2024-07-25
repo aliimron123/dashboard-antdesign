@@ -91,7 +91,7 @@ const { Header } = Layout;
 const NavMobile = () => {
   return (
     <>
-      <Header className="flex justify-between border-b bg-white p-2">
+      <Header className="flex justify-between border-b bg-white p-2 desktop:hidden xtraLarge:hidden">
         <div className="flex items-center justify-center py-5">INI LOGO</div>
         <div className="flex items-center justify-center py-5">
           <Dropdown menu={{ items }} trigger={["click"]} className="text-lg">
