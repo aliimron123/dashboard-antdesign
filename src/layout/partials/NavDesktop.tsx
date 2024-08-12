@@ -1,5 +1,6 @@
-import { Layout, Menu } from "antd";
-import React, { useState } from "react";
+import { Layout, Menu, MenuProps } from "antd";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import MenuNav from "./menu";
 
 const { Sider } = Layout;
@@ -10,10 +11,22 @@ interface IProps {
 }
 
 const NavDesktop = ({ collapsed, setCollapsed }: IProps) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
+
+  useEffect(() => {
+    setSelectedKeys([location.pathname]);
+  }, [location.pathname]);
+
+  const handleMenuClick: MenuProps["onClick"] = (e) => {
+    navigate(e.key);
+  };
+
   return (
     <Sider
-      trigger={null}
       collapsible
+      trigger={null}
       collapsed={collapsed}
       style={{
         overflow: "auto",
@@ -29,16 +42,17 @@ const NavDesktop = ({ collapsed, setCollapsed }: IProps) => {
     >
       <div className="h-screen">
         <div
-          className="my-auto flex cursor-pointer items-center justify-center py-5"
+          className="my-auto flex cursor-pointer items-center justify-center bg-white py-5"
           onClick={() => setCollapsed(!collapsed)}
         >
           INI LOGO
         </div>
         <Menu
-          defaultSelectedKeys={["1"]}
           mode="inline"
           items={MenuNav}
-          className="mt-4"
+          selectedKeys={selectedKeys}
+          className="mt-4 bg-white"
+          onClick={handleMenuClick}
         />
       </div>
     </Sider>

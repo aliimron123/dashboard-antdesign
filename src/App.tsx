@@ -1,12 +1,14 @@
-import "./style/App.css";
-import Router from "./Router";
-import Layouts from "./layout/Layout";
+/* eslint-disable react/function-component-definition */
+import { QueryClientProvider } from "@tanstack/react-query";
+import "./assets/style/App.css";
+import { queryClient } from "./config/queryClient";
+import RouterNavigation from "./routes/RouterNavigation";
 
 function App() {
   return (
-    <Layouts>
-      <Router />
-    </Layouts>
+    <QueryClientProvider client={queryClient}>
+      <RouterNavigation />
+    </QueryClientProvider>
   );
 }
 

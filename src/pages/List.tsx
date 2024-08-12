@@ -2,6 +2,7 @@ import { Button, Flex, Space } from "antd";
 import type { TableColumnsType } from "antd";
 import React, { useState } from "react";
 import { TableComponents } from "../components/partials";
+import { GetWeather } from "../services/weather.query";
 
 interface DataType {
   key: React.Key;
@@ -42,11 +43,14 @@ const List = () => {
 
   const start = () => {
     setLoading(true);
-
     setTimeout(() => {
       setLoading(false);
     }, 1000);
   };
+
+  const { data, error, refetch } = GetWeather();
+  const Data = data?.current;
+  console.log(Data);
 
   return (
     <div className="h-content rounded-lg bg-white px-4 py-8">
