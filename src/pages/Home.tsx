@@ -4,13 +4,13 @@ import {
   LikeOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import ActivitiesStatistic from "../components/dashboard/ActivitiesStatistic";
-import AgeStatistic from "../components/dashboard/AgeChart";
-import BarStatistic from "../components/dashboard/BarStatistic";
-import CalendarCard from "../components/dashboard/CalendarCard";
-import CardStatistic from "../components/dashboard/CardStatistic";
-import GenderStatistic from "../components/dashboard/GenderChart";
-import TodoList from "../components/dashboard/TodoList";
+import ActivitiesStatistic from "../components/module/dashboard/ActivitiesStatistic";
+import AgeStatistic from "../components/module/dashboard/AgeChart";
+import BarStatistic from "../components/module/dashboard/BarStatistic";
+import CalendarCard from "../components/module/dashboard/CalendarCard";
+import CardStatistic from "../components/module/dashboard/CardStatistic";
+import GenderStatistic from "../components/module/dashboard/GenderChart";
+import TodoList from "../components/module/dashboard/TodoList";
 
 const Home = () => {
   const dataCard = [

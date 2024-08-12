@@ -1,14 +1,10 @@
-export interface ResponseData {
-  data: DataWeather[];
-}
-
-export interface DataWeather {
+export interface WeatherList {
   location: {
     name: string;
     region: string;
     country: string;
-    lat: Float32Array;
-    lon: Float32Array;
+    lat: number;
+    lon: number;
     tz_id: string;
     localtime_epoch: number;
     localtime: string;
@@ -16,36 +12,44 @@ export interface DataWeather {
   current: {
     last_updated_epoch: number;
     last_updated: string;
-    temp_c: Float32Array;
-    temp_f: Float32Array;
+    temp_c: number;
+    temp_f: number;
     is_day: number;
     condition: {
       text: string;
       icon: string;
       code: number;
     };
-    wind_mph: Float32Array;
-    wind_kph: Float32Array;
+    wind_mph: number;
+    wind_kph: number;
     wind_degree: number;
     wind_dir: string;
-    pressure_mb: Float32Array;
-    pressure_in: Float32Array;
-    precip_mm: Float32Array;
-    precip_in: Float32Array;
-    humidity: Float32Array;
-    cloud: Float32Array;
-    feelslike_c: Float32Array;
-    feelslike_f: Float32Array;
-    windchill_c: Float32Array;
-    windchill_f: Float32Array;
-    heatindex_c: Float32Array;
-    heatindex_f: Float32Array;
-    dewpoint_c: Float32Array;
-    dewpoint_f: Float32Array;
-    vis_km: Float32Array;
-    vis_miles: Float32Array;
-    uv: Float32Array;
-    gust_mph: Float32Array;
-    gust_kph: Float32Array;
+    pressure_mb: number;
+    pressure_in: number;
+    precip_mm: number;
+    precip_in: number;
+    humidity: number;
+    cloud: number;
+    feelslike_c: number;
+    feelslike_f: number;
+    windchill_c: number;
+    windchill_f: number;
+    heatindex_c: number;
+    heatindex_f: number;
+    dewpoint_c: number;
+    dewpoint_f: number;
+    vis_km: number;
+    vis_miles: number;
+    uv: number;
+    gust_mph: number;
+    gust_kph: number;
+    air_quality: {
+      co: number;
+      no2: number;
+      o3: number;
+      so2: number;
+      pm2_5: number;
+      pm10: number;
+    };
   };
 }

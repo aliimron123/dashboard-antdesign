@@ -11,32 +11,32 @@ type MenuItem = Required<MenuProps>["items"][number];
 
 const MenuNav: MenuItem[] = [
   {
-    key: "1",
+    key: "/dashboard",
     icon: <DashboardOutlined />,
-    label: <a href="/"> Dashboard </a>,
+    label: "Dashboard",
   },
   {
-    key: "2",
+    key: "/project",
     icon: <ProjectOutlined />,
-    label: <a href="/project"> Projects </a>,
+    label: "Projects",
   },
   {
-    key: "3",
+    key: "/todo-list",
     icon: <UnorderedListOutlined />,
-    label: <a href="/todo-list"> Task List </a>,
+    label: "Task List ",
   },
   {
-    key: "4",
+    key: "/notifications",
     icon: <BellOutlined />,
-    label: <a href="/notifications"> Notifications </a>,
+    label: "Notifications",
   },
   {
     key: "sub1",
     label: " Accounts ",
     icon: <UserOutlined />,
     children: [
-      { key: "5", label: <a href="/account/admin"> Admin </a> },
-      { key: "6", label: <a href="/account/admin"> User </a> },
+      { key: "/account/admin", label: "Admin" },
+      { key: "/account/user", label: "User" },
     ],
   },
 ];
